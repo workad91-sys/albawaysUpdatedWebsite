@@ -460,6 +460,30 @@ const Step3Summary = ({ country, region, onBack }: { country: string, region: st
               </div>
             ))}
           </div>
+
+          {/* Full itinerary CTA — Mexico only */}
+          {country === 'Mexico' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="mt-12 p-10 bg-black rounded-[40px] flex flex-col md:flex-row items-center justify-between gap-8"
+            >
+              <div>
+                <p className="text-[#FDB933] text-xs font-black uppercase tracking-widest mb-2">Full Programme Available</p>
+                <h4 className="text-white font-display font-black text-2xl uppercase tracking-tighter">View the Complete Mexico Itinerary</h4>
+                <p className="text-white/40 text-sm mt-2">14 & 10 day options · Guided Autonomy philosophy · Fully detailed day-by-day</p>
+              </div>
+              <a
+                href="/mexico-2025"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center gap-3 bg-[#FDB933] text-black px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white transition-colors"
+              >
+                View Itinerary <ArrowRight size={16} />
+              </a>
+            </motion.div>
+          )}
         </div>
       </div>
     </div>
